@@ -1,0 +1,560 @@
+Create a modern, professional, responsive static HTML website for a creative design and video editing company called **"Duraga Media Works"**.
+
+## Company
+
+Company Name: Duraga Media Works
+
+Business Type:
+
+* Graphic Design
+* Logo Design
+* Branding
+* Video Editing
+* Social Media Creative Design
+* Promotional Videos
+* YouTube Thumbnail Design
+* Posters and Banners
+* Business Card Design
+* Brochure and Flyer Design
+* Digital Marketing Creatives
+* Corporate Branding
+
+Website Purpose:
+The website is primarily a **marketing and portfolio website** to attract new customers and showcase the company's graphic design, logo design, branding, and video editing services.
+
+## Technology Requirements
+
+Use only:
+
+* HTML5
+* CSS3
+* Vanilla JavaScript
+
+Do NOT use:
+
+* React
+* Angular
+* Vue
+* PHP
+* Node.js
+* Backend
+* Database
+
+The website must work as a completely static website.
+
+Create these files:
+
+1. index.html
+2. style.css
+3. script.js
+
+The website must be fully responsive for:
+
+* Desktop
+* Laptop
+* Tablet
+* Mobile
+
+## Website Design
+
+Create a premium creative-agency style design.
+
+Overall look:
+
+* Modern
+* Creative
+* Professional
+* Premium
+* Visually attractive
+* Clean typography
+* Smooth animations
+* Strong visual hierarchy
+
+Use a dark creative theme with attractive gradient effects.
+
+Suggested colors:
+
+* Black / Dark charcoal background
+* White text
+* Gold/yellow or orange accent
+* Purple/pink gradient accents where appropriate
+
+Do not make the website look like a generic template.
+
+Use modern cards, gradients, shadows, rounded corners, hover effects, animated elements and professional spacing.
+
+## Navigation Bar
+
+Create a sticky navigation bar containing:
+
+Logo:
+**Duraga Media Works**
+
+Navigation links:
+
+* Home
+* About
+* Services
+* Portfolio
+* Why Us
+* Contact
+
+Add a prominent button:
+
+**Get a Free Quote**
+
+On mobile:
+
+* Create a hamburger menu
+* Navigation should open and close using JavaScript
+
+## HERO SECTION
+
+Create a visually impressive hero section.
+
+Main heading:
+
+**We Create Designs That Make Your Brand Stand Out**
+
+Subheading:
+
+**Creative Graphic Design, Logo Design, Branding & Video Editing Solutions for Modern Businesses.**
+
+Add two CTA buttons:
+
+**Get a Free Quote**
+**View Our Work**
+
+Add a creative visual area on the right side containing animated design elements representing:
+
+* Logo
+* Video editing
+* Graphic design
+* Branding
+* Social media creatives
+
+Add subtle floating animations.
+
+Add a small trust statement:
+
+**Creative • Professional • Affordable**
+
+## ABOUT SECTION
+
+Heading:
+
+**About Duraga Media Works**
+
+Content:
+
+"Duraga Media Works is a creative design and media studio helping businesses, startups, creators and organizations build powerful visual identities. From professional logos and branding to engaging social media creatives and high-quality video editing, we turn ideas into visually compelling content."
+
+Add statistics cards:
+
+* 100+ Creative Projects
+* 50+ Happy Clients
+* 10+ Design Services
+* 24/7 Creative Support
+
+Use animated counters when the section becomes visible.
+
+## SERVICES SECTION
+
+Heading:
+
+**Our Creative Services**
+
+Create attractive service cards.
+
+Service 1:
+
+### Logo Design
+
+Create unique, memorable and professional logos that represent the identity of your business.
+
+Service 2:
+
+### Graphic Design
+
+Professional posters, banners, flyers, brochures, business cards and marketing materials.
+
+Service 3:
+
+### Brand Identity
+
+Complete branding solutions including colors, typography, brand guidelines and visual identity.
+
+Service 4:
+
+### Video Editing
+
+Professional video editing for advertisements, YouTube videos, social media, corporate videos and promotional content.
+
+Service 5:
+
+### Social Media Designs
+
+Creative Instagram posts, Facebook creatives, LinkedIn graphics, stories and promotional designs.
+
+Service 6:
+
+### YouTube Creatives
+
+Eye-catching YouTube thumbnails, channel branding, intro/outro designs and promotional graphics.
+
+Service 7:
+
+### Promotional Videos
+
+Engaging promotional and advertising videos designed to attract customers.
+
+Service 8:
+
+### Business Marketing Materials
+
+Brochures, presentations, catalogs, posters, flyers, business cards and other marketing materials.
+
+Each service card should contain:
+
+* Creative icon
+* Service title
+* Short description
+* "Learn More" link/button
+
+Add hover animation to every card.
+
+## LOGO DESIGN SECTION
+
+Create a dedicated section:
+
+Heading:
+
+**Your Logo. Your Identity.**
+
+Content:
+
+"Your logo is often the first thing people remember about your business. We create professional, meaningful and memorable logos designed around your brand identity."
+
+Show sample logo project cards using placeholder images.
+
+Categories:
+
+* Business Logo
+* Minimal Logo
+* Luxury Logo
+* Modern Logo
+* Corporate Logo
+* Creative Logo
+
+Add CTA:
+
+**Start Your Logo Project**
+
+## VIDEO EDITING SECTION
+
+Create a visually attractive video editing section.
+
+Heading:
+
+**Bring Your Stories to Life**
+
+Description:
+
+"From short-form social media videos to corporate presentations and promotional advertisements, we transform raw footage into engaging visual stories."
+
+Display cards for:
+
+* YouTube Videos
+* Instagram Reels
+* Promotional Videos
+* Corporate Videos
+* Product Videos
+* Advertisement Videos
+
+Include video placeholder thumbnails with a play button.
+
+Do not use actual copyrighted videos.
+
+Use placeholder images or locally referenced sample media.
+
+## PORTFOLIO SECTION
+
+Heading:
+
+**Our Creative Portfolio**
+
+Create a modern portfolio gallery.
+
+Include category filters:
+
+* All
+* Logo Design
+* Branding
+* Graphic Design
+* Social Media
+* Video Editing
+
+Create at least 12 portfolio items.
+
+Each item should contain:
+
+* Image
+* Project title
+* Category
+* Hover overlay
+* "View Project" button
+
+Use JavaScript to filter portfolio items without refreshing the page.
+
+Add a lightbox/modal when a portfolio item is clicked.
+
+## WHY CHOOSE US
+
+Heading:
+
+**Why Choose Duraga Media Works?**
+
+Create 6 feature cards:
+
+1. Creative Designs
+2. Professional Quality
+3. Custom Solutions
+4. Fast Delivery
+5. Affordable Pricing
+6. Client-Focused Approach
+
+Include short descriptions for each.
+
+## PROCESS SECTION
+
+Heading:
+
+**How We Work**
+
+Create a 4-step process:
+
+01 — Understand
+We understand your business, brand and requirements.
+
+02 — Create
+Our designers create concepts based on your requirements.
+
+03 — Refine
+We collect your feedback and refine the design.
+
+04 — Deliver
+We deliver the final high-quality creative files.
+
+Show this as a modern timeline.
+
+## TESTIMONIAL SECTION
+
+Heading:
+
+**What Our Clients Say**
+
+Create 3 testimonial cards.
+
+Use realistic placeholder testimonials but clearly structure them as sample content that can be replaced later.
+
+Example:
+
+"Duraga Media Works created a professional logo and social media designs for our business. The designs were creative and exactly what we needed."
+
+Include:
+
+* Client name
+* Company name
+* Star rating
+
+## PRICING / SERVICES CTA
+
+Create a marketing CTA section.
+
+Heading:
+
+**Have a Creative Project in Mind?**
+
+Description:
+
+"Let's turn your idea into a design that gets attention."
+
+Buttons:
+
+**Get a Free Quote**
+**Contact Us**
+
+Do not display fixed pricing because services can be customized for each client.
+
+## CONTACT SECTION
+
+Heading:
+
+**Let's Create Something Amazing**
+
+Create a contact form with:
+
+* Name
+* Email
+* Phone
+* Service Required dropdown
+* Project Details
+* Submit button
+
+Service dropdown options:
+
+* Logo Design
+* Graphic Design
+* Branding
+* Video Editing
+* Social Media Design
+* YouTube Design
+* Promotional Video
+* Other
+
+Since this is a static website, do not implement backend email sending.
+
+Instead:
+
+* Validate the form using JavaScript
+* Show a success message after submission
+* Add a placeholder function where backend/email integration can be added later
+
+Also display contact information:
+
+Company:
+**Duraga Media Works**
+
+Email:
+**[your-email@example.com](mailto:your-email@example.com)**
+
+Phone:
+**+91 XXXXX XXXXX**
+
+Location:
+**India**
+
+Replace these placeholder details with configurable values.
+
+## FOOTER
+
+Footer should contain:
+
+Duraga Media Works
+
+"Creative Designs. Powerful Brands."
+
+Links:
+
+* Home
+* About
+* Services
+* Portfolio
+* Contact
+
+Services:
+
+* Logo Design
+* Graphic Design
+* Branding
+* Video Editing
+* Social Media Design
+
+Social media icons/links:
+
+* Instagram
+* Facebook
+* YouTube
+* LinkedIn
+* WhatsApp
+
+Use placeholder URLs that can easily be replaced.
+
+Copyright:
+
+© 2026 Duraga Media Works. All Rights Reserved.
+
+## JAVASCRIPT FEATURES
+
+Implement:
+
+1. Mobile hamburger menu
+2. Smooth scrolling
+3. Sticky navigation
+4. Portfolio category filtering
+5. Portfolio lightbox/modal
+6. Animated statistics counters
+7. Scroll reveal animations
+8. Contact form validation
+9. Success message after form submission
+10. Back-to-top button
+11. Active navigation link while scrolling
+12. Close modal functionality
+13. Close mobile menu when navigation link is clicked
+
+## SEO
+
+Add proper:
+
+* `<title>`
+* Meta description
+* Meta keywords where appropriate
+* Open Graph tags
+* Semantic HTML
+* Proper heading hierarchy
+* Image alt attributes
+
+Suggested title:
+
+**Duraga Media Works | Graphic Design, Logo Design & Video Editing**
+
+Suggested meta description:
+
+**Duraga Media Works provides professional logo design, graphic design, branding, video editing and creative marketing solutions for businesses and creators.**
+
+## PERFORMANCE
+
+Optimize the website for:
+
+* Fast loading
+* Mobile responsiveness
+* SEO
+* Accessibility
+* Clean HTML
+* Clean CSS
+* Maintainable JavaScript
+
+Use lazy loading for portfolio images.
+
+Avoid unnecessary libraries.
+
+## ANIMATIONS
+
+Add professional but subtle animations:
+
+* Fade-in
+* Slide-up
+* Scale
+* Hover effects
+* Floating elements
+* Button hover effects
+* Portfolio image zoom
+* Card hover animations
+
+Do not overuse animations.
+
+The website should feel premium and professional rather than flashy.
+
+## IMPORTANT
+
+Create the complete working code for:
+
+index.html
+style.css
+script.js
+
+Ensure all navigation links, buttons, filters, modal, animations, mobile menu and form validation work correctly.
+
+Use placeholder images from a reliable public image source or clearly marked local placeholder paths that can easily be replaced later.
+
+Make the final website visually impressive enough to be used as the official marketing website for **Duraga Media Works**.
