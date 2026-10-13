@@ -63,16 +63,29 @@ function initializeNavigation() {
   function closeMenu() {
     menu.classList.remove("open");
     toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Open navigation");
   }
 
   toggle.addEventListener("click", () => {
     const isOpen = menu.classList.toggle("open");
     toggle.setAttribute("aria-expanded", String(isOpen));
+    toggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
   });
 
-  $$(".nav-link", menu).forEach((link) => {
+  $$("a", menu).forEach((link) => {
     link.addEventListener("click", closeMenu);
   });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && menu.classList.contains("open")) {
+      closeMenu();
+      toggle.focus();
+    }
+  });
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".navbar")) closeMenu();
+  });
+  window.matchMedia("(min-width: 851px)").addEventListener("change", closeMenu);
 
   window.addEventListener(
     "scroll",
@@ -82,13 +95,16 @@ function initializeNavigation() {
 
   if (!("IntersectionObserver" in window)) return;
 
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (!reducedMotion.matches) document.documentElement.classList.add("motion-ready");
+
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
       entry.target.classList.add("visible");
       observer.unobserve(entry.target);
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.08, rootMargin: "0px 0px 24px 0px" });
 
   $$(".reveal").forEach((element) => revealObserver.observe(element));
 
@@ -116,6 +132,7 @@ function initializeWhatsAppLinks() {
   }
 
   openExternalLink($(".whatsapp-float"), url);
+  $(".whatsapp-float").hidden = false;
   openExternalLink($("#contactWhatsApp"), url);
 
   $$("[data-enquiry]").forEach((link) => {
@@ -125,14 +142,30 @@ function initializeWhatsAppLinks() {
 
 function renderServices() {
   const serviceGrid = $(".services-grid");
+  const groups = [
+    { title: "Brand identity", symbol: "◈", match: /logo|identity/i,
+      description: "A distinctive visual language that makes your business instantly recognizable." },
+    { title: "Graphic design & print", symbol: "✳", match: /graphic|poster|brochure/i,
+      description: "Considered layouts and expressive visuals, from your business card to your next campaign." },
+    { title: "Video & motion", symbol: "▷", match: /video|reels/i,
+      description: "Stories with rhythm, personality, and purpose. Edited to make every second count." },
+    { title: "Digital & social", symbol: "↗", match: /./,
+      description: "Creative that connects across feeds, screens, and all the places your audience spends time." },
+  ].map((group) => ({ ...group, services: [] }));
 
-  config.services.forEach((service, index) => {
-    const card = createElement("article", "service-card");
+  config.services.forEach((service) => {
+    groups.find((group) => group.match.test(service.title)).services.push(service);
+  });
+
+  groups.filter((group) => group.services.length).forEach((service, index) => {
+    const card = createElement("article", "service-card reveal");
     const top = createElement("div", "service-top");
-    const quoteLink = createElement("a", "", "Get a Quote ↗");
+    const quoteLink = createElement("a", "", "Let’s talk about your project ↗");
+    const tags = createElement("ul", "service-tags");
+    service.services.forEach((item) => tags.append(createElement("li", "", item.title)));
 
     top.append(
-      createElement("span", "", "✳"),
+      createElement("span", "", service.symbol),
       createElement("span", "", String(index + 1).padStart(2, "0")),
     );
 
@@ -148,6 +181,7 @@ function renderServices() {
       top,
       createElement("h3", "", service.title),
       createElement("p", "", service.description),
+      tags,
       quoteLink,
     );
     serviceGrid.append(card);
@@ -155,14 +189,7 @@ function renderServices() {
 }
 
 function initializePortfolio() {
-  const filterNames = [
-    "All Projects",
-    "Logo Design",
-    "Branding",
-    "Graphic Design",
-    "Social Media",
-    "Video Editing",
-  ];
+  const filterNames = ["All Projects", ...new Set(projects.map((project) => project.category))];
   const filterGroup = $(".portfolio-filters");
   const projectGrid = $(".portfolio-grid");
   const dialog = $("#portfolioModal");
@@ -190,9 +217,9 @@ function initializePortfolio() {
     externalLink.hidden = !projectUrl;
     if (projectUrl) openExternalLink(externalLink, projectUrl);
 
-    $("#projectEnquiry").href = makeWhatsAppUrl(
+    openExternalLink($("#projectEnquiry"), makeWhatsAppUrl(
       `Hello ${config.companyName}, I liked your ${project.name} design. Can we discuss something similar for my business?`,
-    );
+    ));
   }
 
   function renderProjects(category) {
@@ -306,6 +333,18 @@ function initializeVideos() {
     const card = createElement("article", "video-card");
     const thumbnail = createElement("div", "video-thumb");
     const videoUrl = getVideoUrl(video);
+
+    if (!videoUrl) {
+      const link = createElement("a", "video-offering");
+      const label = createElement("div");
+      label.append(createElement("h3", "", video.title), createElement("small", "", "Discuss your video project"));
+      const icon = createElement("span", "", "▷");
+      icon.setAttribute("aria-hidden", "true");
+      link.append(icon, label, createElement("span", "", "↗"));
+      openExternalLink(link, makeWhatsAppUrl(`Hello ${config.companyName}, I would like to discuss ${video.title.toLowerCase()} for my business.`));
+      $(".video-grid").append(link);
+      return;
+    }
 
     if (getSafeWebUrl(video.thumbnail)) {
       const image = createElement("img");
@@ -443,8 +482,8 @@ function renderContactLinks() {
 
   if (/^[1-9]\d{7,14}$/.test(phoneDigits)) {
     const displayPhone = getDigits(config.phone).length === 10
-      ? `+91 ${getDigits(config.phone)}`
-      : `+${phoneDigits}`;
+      ? `+91 ${getDigits(config.phone).replace(/\d(?=\d{4})/g, "•")}`
+      : `+${phoneDigits.replace(/\d(?=\d{4})/g, "•")}`;
     contactOptions.push(["Phone", displayPhone, `tel:+${phoneDigits}`]);
   }
 
@@ -536,7 +575,6 @@ function updateSearchMetadata() {
 
 /* Start each page feature from one place. */
 initializeCompanyContent();
-initializeNavigation();
 initializeWhatsAppLinks();
 renderServices();
 initializePortfolio();
@@ -546,3 +584,4 @@ renderReasonsAndFaqs();
 renderTestimonials();
 renderContactLinks();
 updateSearchMetadata();
+initializeNavigation();

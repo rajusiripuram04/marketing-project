@@ -1,11 +1,11 @@
-﻿window.SITE_CONFIG = {
-  companyName: "Durga Media Works",
+window.SITE_CONFIG = {
+  companyName: "Durga Digital Media Works Limited",
   description:
     "Creative designs. Powerful brands. Thoughtful visual identities, graphics and video for businesses and creators.",
 
   // Use a ten-digit Indian mobile number. The site adds India's 91 country code.
-  phone: "9182284243",
-  whatsapp: "9182284243",
+  phone: "7732006606",
+  whatsapp: "7732006606",
   email: "",
   instagram: "https://www.instagram.com/shashi_dp/",
   address: "",
@@ -18,7 +18,7 @@
   },
 
   seo: {
-    title: "Durga Media Works | Logo Design, Branding & Video Editing",
+    title: "Durga Digital Media Works Limited | Logo Design, Branding & Video Editing",
     description:
       "Memorable logo design, complete brand identities, graphic design and video editing for businesses and creators.",
     url: "",
@@ -27,7 +27,7 @@
 
   about: {
     story:
-      "Durga Media Works is a creative design and media studio for businesses, startups, creators and organizations. We shape ideas into memorable visual identities through logo design, branding, social media creative and video editing.",
+      "Durga Digital Media Works Limited is a creative design and media studio for businesses, startups, creators and organizations. We shape ideas into memorable visual identities through logo design, branding, social media creative and video editing.",
     mission:
       "Bring clarity and character to businesses through thoughtful visual design.",
     vision:
